@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Image View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ImageViewController" customModule="Machine_Learning_Image" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="RXx-vN-g1G">
+                                <rect key="frame" x="0.0" y="241" width="414" height="414"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="414" id="RTF-C5-ich"/>
+                                </constraints>
+                                <collectionViewLayout key="collectionViewLayout" id="5Lv-7f-VAQ" customClass="GridFlowLayout" customModule="Machine_Learning_Image" customModuleProvider="target"/>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ImageCell" id="Rab-XQ-8jZ" customClass="ImageCollectionViewCell" customModule="Machine_Learning_Image" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="143" height="133"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="qSG-RQ-fIz">
+                                            <rect key="frame" x="0.0" y="0.0" width="143" height="133"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="iBZ-TU-Pvv">
+                                                    <rect key="frame" x="0.0" y="0.0" width="143" height="133"/>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="iBZ-TU-Pvv" firstAttribute="leading" secondItem="qSG-RQ-fIz" secondAttribute="leading" id="BxK-ki-QZh"/>
+                                                <constraint firstItem="iBZ-TU-Pvv" firstAttribute="top" secondItem="qSG-RQ-fIz" secondAttribute="top" id="T8d-Gh-tv9"/>
+                                                <constraint firstAttribute="bottom" secondItem="iBZ-TU-Pvv" secondAttribute="bottom" id="pC7-cm-nD1"/>
+                                                <constraint firstAttribute="trailing" secondItem="iBZ-TU-Pvv" secondAttribute="trailing" id="tFK-5p-Zr1"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="143" height="133"/>
+                                        <connections>
+                                            <outlet property="imageView" destination="iBZ-TU-Pvv" id="zy6-h4-q11"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hSb-xf-wpz">
+                                <rect key="frame" x="10" y="730" width="394" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="M15-ER-7ep"/>
+                                </constraints>
+                                <attributedString key="attributedText">
+                                    <fragment content="Tap on the photo above ">
+                                        <attributes>
+                                            <font key="NSFont" size="12" name="AvenirNext-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="👆🏼">
+                                        <attributes>
+                                            <font key="NSFont" size="12" name="AppleColorEmoji"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="RXx-vN-g1G" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="2wW-CJ-XZd"/>
+                            <constraint firstItem="hSb-xf-wpz" firstAttribute="top" secondItem="RXx-vN-g1G" secondAttribute="bottom" constant="75" id="Gmm-9H-hdG"/>
+                            <constraint firstItem="RXx-vN-g1G" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="MZK-54-GHa"/>
+                            <constraint firstItem="RXx-vN-g1G" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="WYo-YC-Lm5"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="RXx-vN-g1G" secondAttribute="trailing" id="YeS-jn-Qtx"/>
+                            <constraint firstItem="hSb-xf-wpz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="aL0-dZ-fY3"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hSb-xf-wpz" secondAttribute="trailing" constant="10" id="sCa-El-m0e"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="classificationLabel" destination="hSb-xf-wpz" id="rxE-ND-AXy"/>
+                        <outlet property="collectionView" destination="RXx-vN-g1G" id="6jJ-SY-FXa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="115.84821428571428"/>
+        </scene>
+    </scenes>
+</document>

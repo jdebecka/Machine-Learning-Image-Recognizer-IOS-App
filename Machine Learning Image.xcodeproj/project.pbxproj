@@ -9,21 +9,29 @@
 /* Begin PBXBuildFile section */
 		C01576F3244745C800DD2816 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01576F2244745C800DD2816 /* AppDelegate.swift */; };
 		C01576F5244745C800DD2816 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01576F4244745C800DD2816 /* SceneDelegate.swift */; };
-		C01576F7244745C800DD2816 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01576F6244745C800DD2816 /* ViewController.swift */; };
+		C01576F7244745C800DD2816 /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01576F6244745C800DD2816 /* ImageViewController.swift */; };
 		C01576FA244745C800DD2816 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C01576F8244745C800DD2816 /* Main.storyboard */; };
 		C01576FC244745D100DD2816 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C01576FB244745D100DD2816 /* Assets.xcassets */; };
 		C01576FF244745D100DD2816 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C01576FD244745D100DD2816 /* LaunchScreen.storyboard */; };
+		C015770B24474D5D00DD2816 /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C015770A24474D5D00DD2816 /* ImageCollectionViewCell.swift */; };
+		C015770D24474F4200DD2816 /* FoodItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = C015770C24474F4200DD2816 /* FoodItems.swift */; };
+		C015770F2447536D00DD2816 /* GridFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = C015770E2447536D00DD2816 /* GridFlowLayout.swift */; };
+		C0157711244758C300DD2816 /* MobileNetV2.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = C0157710244758C300DD2816 /* MobileNetV2.mlmodel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		C01576EF244745C800DD2816 /* Machine Learning Image.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Machine Learning Image.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C01576F2244745C800DD2816 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C01576F4244745C800DD2816 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		C01576F6244745C800DD2816 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C01576F6244745C800DD2816 /* ImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
 		C01576F9244745C800DD2816 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C01576FB244745D100DD2816 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C01576FE244745D100DD2816 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C0157700244745D100DD2816 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C015770A24474D5D00DD2816 /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
+		C015770C24474F4200DD2816 /* FoodItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodItems.swift; sourceTree = "<group>"; };
+		C015770E2447536D00DD2816 /* GridFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridFlowLayout.swift; sourceTree = "<group>"; };
+		C0157710244758C300DD2816 /* MobileNetV2.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = MobileNetV2.mlmodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +64,51 @@
 		C01576F1244745C800DD2816 /* Machine Learning Image */ = {
 			isa = PBXGroup;
 			children = (
+				C0157709244746C000DD2816 /* Resources */,
+				C01577082447460100DD2816 /* Model */,
+				C0157707244745FB00DD2816 /* View */,
+				C0157706244745EC00DD2816 /* Controller */,
 				C01576F2244745C800DD2816 /* AppDelegate.swift */,
 				C01576F4244745C800DD2816 /* SceneDelegate.swift */,
-				C01576F6244745C800DD2816 /* ViewController.swift */,
-				C01576F8244745C800DD2816 /* Main.storyboard */,
-				C01576FB244745D100DD2816 /* Assets.xcassets */,
-				C01576FD244745D100DD2816 /* LaunchScreen.storyboard */,
 				C0157700244745D100DD2816 /* Info.plist */,
 			);
 			path = "Machine Learning Image";
+			sourceTree = "<group>";
+		};
+		C0157706244745EC00DD2816 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				C01576F6244745C800DD2816 /* ImageViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		C0157707244745FB00DD2816 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C01576F8244745C800DD2816 /* Main.storyboard */,
+				C01576FD244745D100DD2816 /* LaunchScreen.storyboard */,
+				C015770A24474D5D00DD2816 /* ImageCollectionViewCell.swift */,
+				C015770E2447536D00DD2816 /* GridFlowLayout.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C01577082447460100DD2816 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C0157709244746C000DD2816 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				C01576FB244745D100DD2816 /* Assets.xcassets */,
+				C0157710244758C300DD2816 /* MobileNetV2.mlmodel */,
+				C015770C24474F4200DD2816 /* FoodItems.swift */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,9 +182,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C01576F7244745C800DD2816 /* ViewController.swift in Sources */,
+				C0157711244758C300DD2816 /* MobileNetV2.mlmodel in Sources */,
+				C01576F7244745C800DD2816 /* ImageViewController.swift in Sources */,
 				C01576F3244745C800DD2816 /* AppDelegate.swift in Sources */,
+				C015770B24474D5D00DD2816 /* ImageCollectionViewCell.swift in Sources */,
+				C015770F2447536D00DD2816 /* GridFlowLayout.swift in Sources */,
 				C01576F5244745C800DD2816 /* SceneDelegate.swift in Sources */,
+				C015770D24474F4200DD2816 /* FoodItems.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
